@@ -19,6 +19,7 @@ import {
   CircularProgress,
   Paper,
 } from "@mui/material";
+import { useTranslations } from 'next-intl';
 
 interface FormState {
   email: string;
@@ -26,6 +27,7 @@ interface FormState {
 }
 
 export default function Login() {
+  const t = useTranslations();
   const router = useRouter();
   const { user, loading } = useAuth();
   const [form, setForm] = useState<FormState>({ email: "", password: "" });
@@ -64,7 +66,7 @@ export default function Login() {
       if (err instanceof FirebaseError) {
         setError(err.message);
       } else {
-        setError("Error desconocido");
+        setError(t('Common.error'));
       }
     } finally {
       setIsLoading(false);
@@ -82,7 +84,7 @@ export default function Login() {
       if (err instanceof FirebaseError) {
         setError(err.message);
       } else {
-        setError("Error desconocido");
+        setError(t('Common.error'));
       }
     } finally {
       setIsLoading(false);
@@ -93,12 +95,12 @@ export default function Login() {
     <Container maxWidth="sm" sx={{ mt: 8 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom align="center">
-          Iniciar Sesión
+          {t('LoginPage.title')}
         </Typography>
         <Box component="form" onSubmit={loginWithEmail} sx={{ mt: 2 }}>
           <TextField
             fullWidth
-            label="Email"
+            label={t('Common.email')}
             type="email"
             name="email"
             value={form.email}
@@ -109,7 +111,7 @@ export default function Login() {
           />
           <TextField
             fullWidth
-            label="Contraseña"
+            label={t('Common.password')}
             type="password"
             name="password"
             value={form.password}
@@ -125,7 +127,7 @@ export default function Login() {
             disabled={isLoading}
             sx={{ mb: 2 }}
           >
-            {isLoading ? <CircularProgress size={24} /> : "Login con Email"}
+            {isLoading ? <CircularProgress size={24} /> : t('LoginPage.loginWithEmail')}
           </Button>
         </Box>
         <Button
@@ -135,7 +137,7 @@ export default function Login() {
           disabled={isLoading}
           sx={{ mb: 2 }}
         >
-          {isLoading ? <CircularProgress size={24} /> : "Login con Google"}
+          {isLoading ? <CircularProgress size={24} /> : t('LoginPage.loginWithGoogle')}
         </Button>
         {error && <Alert severity="error">{error}</Alert>}
       </Paper>
