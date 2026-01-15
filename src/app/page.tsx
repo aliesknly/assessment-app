@@ -10,6 +10,8 @@ import {
   Paper,
   CircularProgress,
 } from "@mui/material";
+import { Person, Logout } from "@mui/icons-material";
+import Link from "next/link";
 
 export default function Home() {
   const { user, logout } = useAuth();
@@ -32,10 +34,21 @@ export default function Home() {
           <Typography variant="h6" align="center" sx={{ mb: 4 }}>
             Hola, {user?.email}!
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<Person />}
+              component={Link}
+              href="/profile"
+              size="large"
+            >
+              Ver Perfil
+            </Button>
             <Button
               variant="contained"
               color="secondary"
+              startIcon={<Logout />}
               onClick={handleLogout}
               size="large"
             >
