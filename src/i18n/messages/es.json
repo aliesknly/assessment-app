@@ -11,7 +11,7 @@
     "save": "Guardar",
     "edit": "Editar",
     "verified": "Verified",
-    "notVerified": "Not Verified"
+    "notVerified": "Not Verified",
     "toggleTheme": "Cambiar tema",
     "settings": "Configuración",
     "verified": "Verificado"
@@ -40,9 +40,6 @@
     "provider": "Proveedor",
     "unknown": "Desconocido",
     "userFullName": "Nombre del Usuario"
-  }
-}
-
   },
   "settings": {
     "comingSoon": "Próximamente",
