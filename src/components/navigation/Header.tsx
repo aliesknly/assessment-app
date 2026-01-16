@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  AppBar,
   Toolbar,
   Typography,
   Box,
@@ -13,19 +12,31 @@ import {
   Divider,
   ListItemText,
 } from "@mui/material";
-import { AccountCircle, Logout, Settings } from "@mui/icons-material";
+import {
+  Menu as MenuIcon,
+  AccountCircle,
+  Logout,
+  Settings,
+} from "@mui/icons-material";
 import { useAuth } from "@/contexts/AuthContext";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { AppBar } from "./AppBar";
 
-export default function Header() {
+interface HeaderProps {
+  isDrawerOpen: boolean;
+  handleDrawerOpen(): void;
+}
+export default function Header({
+  handleDrawerOpen,
+  isDrawerOpen,
+}: HeaderProps) {
   const { user, logout } = useAuth();
   const t = useTranslations();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorEl);
   const router = useRouter();
-  const pathname = usePathname();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -45,14 +56,27 @@ export default function Header() {
     router.push(path);
   };
 
-  const isActivePath = (path: string) => pathname === path;
+  // const isActivePath = (path: string) => pathname === path;
 
   return (
-    <AppBar
-      position="static"
-      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-    >
+    <AppBar position="fixed" open={isDrawerOpen}>
       <Toolbar>
+        {user && (
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={[
+              {
+                marginRight: 5,
+              },
+              isDrawerOpen && { display: "none" },
+            ]}
+          >
+            <MenuIcon />
+          </IconButton>
+        )}
         {/* Left side - App Name */}
         <Typography
           variant="h6"

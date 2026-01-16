@@ -39,8 +39,29 @@
     "unknown": "Unknown",
     "userFullName": "User Full Name"
   },
-  "settings": {
+  "Settings": {
     "comingSoon": "Coming Soon",
     "workInProgress": "Work in progress"
+  },
+  "Dashboard": {
+    "welcome": "Welcome",
+    "totalAssessments": "Total Assessments",
+    "completed": "Completed",
+    "inProgress": "In progress",
+    "averageScore": "Average Score",
+    "recentActivity": "Recent Activity",
+    "assessments": "Assessments",
+    "workInProgress": "Work in progress",
+    "activity": {
+      "date": "Date",
+      "status": "Status"
+    }
+  },
+  "Sidebar": {
+    "menu": "Menu"
+  },
+  "Assessments": {
+    "date": "Date",
+    "status": "Status"
   }
 }

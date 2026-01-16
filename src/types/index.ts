@@ -10,7 +10,7 @@ export interface ActivityItem {
   id: string;
   title: string;
   date: string;
-  status: "pending" | "completed" | "in_review";
+  status: "pending" | "completed" | "in_review" | "reviewed";
 }
 
 export interface Stats {
