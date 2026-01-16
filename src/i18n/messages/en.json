@@ -10,11 +10,13 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "settings": "Settings",
+    "verified": "Verified"
   },
   "HomePage": {
     "title": "Welcome to Assessment App",
-    "subtitle": "Hello, {{email}}!",
+    "subtitle": "Hello, {email}!",
     "viewProfile": "View Profile"
   },
   "LoginPage": {
@@ -34,6 +36,11 @@
     "notVerified": "Not Verified",
     "userId": "User ID",
     "provider": "Provider",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "userFullName": "User Full Name"
+  },
+  "settings": {
+    "comingSoon": "Coming Soon",
+    "workInProgress": "Work in progress"
   }
 }
