@@ -2,17 +2,10 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import AuthGuard from "@/components/AuthGuard";
-import {
-  Container,
-  Typography,
-  Button,
-  Box,
-  Paper,
-  CircularProgress,
-} from "@mui/material";
+import { Container, Typography, Button, Box, Paper } from "@mui/material";
 import { Person, Logout } from "@mui/icons-material";
 import Link from "next/link";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations();
@@ -31,10 +24,10 @@ export default function Home() {
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h3" component="h1" gutterBottom align="center">
-            {t('HomePage.title')}
+            {t("HomePage.title")}
           </Typography>
           <Typography variant="h6" align="center" sx={{ mb: 4 }}>
-            {t('HomePage.subtitle', { email: user?.email || '' })}
+            {t("HomePage.subtitle", { email: user?.email || "" })}
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <Button
@@ -45,7 +38,7 @@ export default function Home() {
               href="/profile"
               size="large"
             >
-              {t('HomePage.viewProfile')}
+              {t("HomePage.viewProfile")}
             </Button>
             <Button
               variant="contained"
@@ -54,7 +47,7 @@ export default function Home() {
               onClick={handleLogout}
               size="large"
             >
-              {t('Common.logout')}
+              {t("Common.logout")}
             </Button>
           </Box>
         </Paper>

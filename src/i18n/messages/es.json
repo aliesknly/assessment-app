@@ -12,6 +12,9 @@
     "edit": "Editar",
     "verified": "Verified",
     "notVerified": "Not Verified"
+    "toggleTheme": "Cambiar tema",
+    "settings": "Configuración",
+    "verified": "Verificado"
   },
   "HomePage": {
     "title": "Bienvenido a Assessment App",
@@ -40,3 +43,30 @@
   }
 }
 
+  },
+  "settings": {
+    "comingSoon": "Próximamente",
+    "workInProgress": "En construcción"
+  },
+  "Dashboard": {
+    "welcome": "Bienvenido",
+    "totalAssessments": "Total de examenes",
+    "completed": "Completado",
+    "inProgress": "En progreso",
+    "averageScore": "Puntaje promedio",
+    "recentActivity": "Actividad reciente",
+    "assessments": "Examenes",
+    "workInProgress": "Progreso actual",
+    "activity": {
+      "date": "Fecha",
+      "status": "Estado"
+    }
+  },
+  "Sidebar": {
+    "menu": "Menu"
+  },
+  "Assessments": {
+    "date": "Fecha",
+    "status": "Status"
+  }
+}
