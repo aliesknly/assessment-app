@@ -1,0 +1,67 @@
+{
+  "Common": {
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile",
+    "email": "Email",
+    "password": "Password",
+    "loading": "Loading...",
+    "error": "Error",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "toggleTheme": "Toggle theme",
+    "settings": "Settings",
+    "verified": "Verified"
+  },
+  "HomePage": {
+    "title": "Welcome to Assessment App",
+    "subtitle": "Hello, {email}!",
+    "viewProfile": "View Profile"
+  },
+  "LoginPage": {
+    "title": "Sign In",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "loginWithEmail": "Login with Email",
+    "loginWithGoogle": "Login with Google",
+    "loading": "Loading...",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "ProfilePage": {
+    "title": "My Profile",
+    "contactInfo": "Contact Information",
+    "account": "Account",
+    "verified": "Verified",
+    "notVerified": "Not Verified",
+    "userId": "User ID",
+    "provider": "Provider",
+    "unknown": "Unknown",
+    "userFullName": "User Full Name"
+  },
+  "Settings": {
+    "comingSoon": "Coming Soon",
+    "workInProgress": "Work in progress"
+  },
+  "Dashboard": {
+    "welcome": "Welcome",
+    "totalAssessments": "Total Assessments",
+    "completed": "Completed",
+    "inProgress": "In progress",
+    "averageScore": "Average Score",
+    "recentActivity": "Recent Activity",
+    "assessments": "Assessments",
+    "workInProgress": "Work in progress",
+    "activity": {
+      "date": "Date",
+      "status": "Status"
+    }
+  },
+  "Sidebar": {
+    "menu": "Menu"
+  },
+  "Assessments": {
+    "date": "Date",
+    "status": "Status"
+  }
+}

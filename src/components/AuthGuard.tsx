@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
-import { Container, CircularProgress } from '@mui/material';
+import { ReactNode, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/AuthContext";
+import { Container, CircularProgress } from "@mui/material";
 
 interface AuthGuardProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export default function AuthGuard({ children }: AuthGuardProps) {
@@ -15,13 +15,16 @@ export default function AuthGuard({ children }: AuthGuardProps) {
 
   useEffect(() => {
     if (!loading && !user) {
-      router.push('/login');
+      router.push("/login");
     }
   }, [user, loading, router]);
 
   if (loading) {
     return (
-      <Container maxWidth="sm" sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+      <Container
+        maxWidth="sm"
+        sx={{ display: "flex", justifyContent: "center", mt: 4 }}
+      >
         <CircularProgress />
       </Container>
     );
@@ -33,3 +36,4 @@ export default function AuthGuard({ children }: AuthGuardProps) {
 
   return <>{children}</>;
 }
+

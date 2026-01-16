@@ -2,25 +2,20 @@
 
 import { useAuth } from "@/contexts/AuthContext";
 import AuthGuard from "@/components/AuthGuard";
-import {
-  Container,
-  Typography,
-  Button,
-  Box,
-  Paper,
-  CircularProgress,
-} from "@mui/material";
+import { Container, Typography, Button, Box, Paper } from "@mui/material";
 import { Person, Logout } from "@mui/icons-material";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations();
   const { user, logout } = useAuth();
 
   const handleLogout = async () => {
     try {
       await logout();
     } catch (error) {
-      console.error("Error al cerrar sesión:", error);
+      console.error("Error closing session:", error);
     }
   };
 
@@ -29,10 +24,10 @@ export default function Home() {
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography variant="h3" component="h1" gutterBottom align="center">
-            Bienvenido a la Assessment App
+            {t("HomePage.title")}
           </Typography>
           <Typography variant="h6" align="center" sx={{ mb: 4 }}>
-            Hola, {user?.email}!
+            {t("HomePage.subtitle", { email: user?.email || "" })}
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "center", gap: 2 }}>
             <Button
@@ -43,7 +38,7 @@ export default function Home() {
               href="/profile"
               size="large"
             >
-              Ver Perfil
+              {t("HomePage.viewProfile")}
             </Button>
             <Button
               variant="contained"
@@ -52,7 +47,7 @@ export default function Home() {
               onClick={handleLogout}
               size="large"
             >
-              Cerrar Sesión
+              {t("Common.logout")}
             </Button>
           </Box>
         </Paper>

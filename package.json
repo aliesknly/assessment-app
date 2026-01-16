@@ -19,6 +19,7 @@
     "@mui/material-nextjs": "^7.3.7",
     "@mui/styled-engine-sc": "^7.3.7",
     "next": "16.1.1",
+    "next-intl": "^4.7.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "styled-components": "^6.2.0"
