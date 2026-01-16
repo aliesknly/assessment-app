@@ -1,0 +1,39 @@
+{
+  "Common": {
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión",
+    "profile": "Perfil",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "loading": "Cargando...",
+    "error": "Error",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "toggleTheme": "Cambiar tema"
+  },
+  "HomePage": {
+    "title": "Bienvenido a Assessment App",
+    "subtitle": "¡Hola, {{email}}!",
+    "viewProfile": "Ver Perfil"
+  },
+  "LoginPage": {
+    "title": "Iniciar Sesión",
+    "emailPlaceholder": "Ingresa tu correo",
+    "passwordPlaceholder": "Ingresa tu contraseña",
+    "loginWithEmail": "Login con Email",
+    "loginWithGoogle": "Login con Google",
+    "loading": "Cargando...",
+    "invalidCredentials": "Correo o contraseña inválidos"
+  },
+  "ProfilePage": {
+    "title": "Mi Perfil",
+    "contactInfo": "Información de Contacto",
+    "account": "Cuenta",
+    "verified": "Verificado",
+    "notVerified": "No Verificado",
+    "userId": "ID de Usuario",
+    "provider": "Proveedor",
+    "unknown": "Desconocido"
+  }
+}
