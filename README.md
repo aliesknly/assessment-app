@@ -152,57 +152,54 @@ The project is built using modern, scalable, and secure technologies:
 
 ## Roadmap
 
-Basándome en la descripción del proyecto, aquí va una sugerencia \
-de roadmap dividido en fases:
-
 ### Fase 1: Core Authentication & User Management (En progreso)
 
-- Firebase Auth integration
-- User registration and login
-- **Onboarding Flow:**
-  - Company information input (name, address, phone, mission, objectives)
-  - Position selection for job application
-  - Basic profile setup
-- User roles (Admin, Manager, Candidate)
-- Protected routes
-- Basic profile page
+- [x] Firebase Auth integration
+- [x] User registration and login
+- [ ] **Onboarding Flow:**
+  - [ ] Company information input (name, address, phone, mission, objectives)
+  - [ ] Position selection for job application
+  - [ ] Basic profile setup
+- [ ] User roles (Admin, Manager, Candidate)
+- [x] Protected routes
+- [x] Basic profile page
 
 ### Fase 2: Assessment Creation & Assignment
 
-- Create/edit assessments with categories (skills, positions)
-- Question types: Multiple choice, Single choice, Text input
-- Question management (CRUD)
-- Assessment configuration (min/max questions)
-- **Assessment Filtering & Display:**
-  - Filter assessments by company type and position
-  - Personalized dashboard showing relevant assessments for candidates
+- [ ] Create/edit assessments with categories (skills, positions)
+- [ ] Question types: Multiple choice, Single choice, Text input
+- [ ] Question management (CRUD)
+- [ ] Assessment configuration (min/max questions)
+- [ ] **Assessment Filtering & Display:**
+  - [ ] Filter assessments by company type and position
+  - [ ] Personalized dashboard showing relevant assessments for candidates
 
 ### Fase 3: Assessment Taking
 
-- Candidate interface to take assessments
-- Real-time question navigation
-- Auto-save progress
-- Time limits and validation
+- [ ] Candidate interface to take assessments
+- [ ] Real-time question navigation
+- [ ] Auto-save progress
+- [ ] Time limits and validation
 
 ### Fase 4: Evaluation & Reporting
 
-- Automatic evaluation for choice questions
-- Manual review system for text answers
-- Score calculation and percentage contributions
-- Reports dashboard with role-based access
+- [ ] Automatic evaluation for choice questions
+- [ ] Manual review system for text answers
+- [ ] Score calculation and percentage contributions
+- [ ] Reports dashboard with role-based access
 
 ### Fase 5: Admin Panel & Advanced Features
 
-- User management (invite, assign roles)
-- Assessment analytics and statistics
-- Export results (PDF, CSV)
-- Integration with MongoDB for data persistence
-- Advanced evaluation algorithms
+- [ ] User management (invite, assign roles)
+- [ ] Assessment analytics and statistics
+- [ ] Export results (PDF, CSV)
+- [ ] Integration with MongoDB for data persistence
+- [ ] Advanced evaluation algorithms
 
 ### Fase 6: Production & Optimization
 
-- Deployment setup (Vercel, Firebase Hosting)
-- Performance optimization
-- Testing suite (unit, integration, e2e)
-- Security hardening
-- Multi-language support
+- [ ] Deployment setup (Vercel, Firebase Hosting)
+- [ ] Performance optimization
+- [ ] Testing suite (unit, integration, e2e)
+- [ ] Security hardening
+- [ ] Multi-language support
