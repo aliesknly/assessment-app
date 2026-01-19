@@ -10,6 +10,8 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
+    "verified": "Verified",
+    "notVerified": "Not Verified",
     "toggleTheme": "Toggle theme",
     "settings": "Settings",
     "verified": "Verified"
@@ -37,7 +39,7 @@
     "userId": "User ID",
     "provider": "Provider",
     "unknown": "Unknown",
-    "userFullName": "User Full Name"
+    "userFullName": "User Name"
   },
   "Settings": {
     "comingSoon": "Coming Soon",
