@@ -14,6 +14,9 @@
 
 ## Styling
 
-- Use Tailwind CSS utilities only
-- No inline styles or CSS-in-JS
+- Use Material UI utilities only
 - No hardcoded colors - use design system tokens
+
+## Feedback
+
+- Tell me how can resolve the issues with a code example

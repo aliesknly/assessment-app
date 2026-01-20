@@ -1,7 +1,7 @@
 "use client";
 import { useState, FormEvent, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { auth } from "@/lib/firebase-client";
+import { auth } from "@/lib/firebase/client";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
@@ -18,8 +18,12 @@ import {
   Alert,
   CircularProgress,
   Paper,
+  Divider,
 } from "@mui/material";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import LinkMaterial from "@/components/navigation/LinkMaterial";
+import Link from "next/link";
 
 interface FormState {
   email: string;
@@ -44,7 +48,10 @@ export default function Login() {
   // Show loading while checking auth state
   if (loading) {
     return (
-      <Container maxWidth="sm" sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+      <Container
+        maxWidth="sm"
+        sx={{ display: "flex", justifyContent: "center", mt: 4 }}
+      >
         <CircularProgress />
       </Container>
     );
@@ -66,7 +73,7 @@ export default function Login() {
       if (err instanceof FirebaseError) {
         setError(err.message);
       } else {
-        setError(t('Common.error'));
+        setError(t("Common.error"));
       }
     } finally {
       setIsLoading(false);
@@ -84,7 +91,7 @@ export default function Login() {
       if (err instanceof FirebaseError) {
         setError(err.message);
       } else {
-        setError(t('Common.error'));
+        setError(t("Common.error"));
       }
     } finally {
       setIsLoading(false);
@@ -95,27 +102,31 @@ export default function Login() {
     <Container maxWidth="sm" sx={{ mt: 8 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom align="center">
-          {t('LoginPage.title')}
+          {t("LoginPage.title")}
         </Typography>
         <Box component="form" onSubmit={loginWithEmail} sx={{ mt: 2 }}>
           <TextField
             fullWidth
-            label={t('Common.email')}
+            label={t("Common.email")}
             type="email"
             name="email"
             value={form.email}
-            onChange={(e) => setForm((prev) => ({ ...prev, email: e.target.value }))}
+            onChange={(e) =>
+              setForm((prev) => ({ ...prev, email: e.target.value }))
+            }
             required
             disabled={isLoading}
             sx={{ mb: 2 }}
           />
           <TextField
             fullWidth
-            label={t('Common.password')}
+            label={t("Common.password")}
             type="password"
             name="password"
             value={form.password}
-            onChange={(e) => setForm((prev) => ({ ...prev, password: e.target.value }))}
+            onChange={(e) =>
+              setForm((prev) => ({ ...prev, password: e.target.value }))
+            }
             required
             disabled={isLoading}
             sx={{ mb: 3 }}
@@ -125,21 +136,45 @@ export default function Login() {
             fullWidth
             variant="contained"
             disabled={isLoading}
-            sx={{ mb: 2 }}
           >
-            {isLoading ? <CircularProgress size={24} /> : t('LoginPage.loginWithEmail')}
+            {isLoading ? (
+              <CircularProgress size={24} />
+            ) : (
+              t("LoginPage.loginWithEmail")
+            )}
           </Button>
         </Box>
-        <Button
-          fullWidth
-          variant="outlined"
-          onClick={loginWithGoogle}
-          disabled={isLoading}
-          sx={{ mb: 2 }}
-        >
-          {isLoading ? <CircularProgress size={24} /> : t('LoginPage.loginWithGoogle')}
-        </Button>
         {error && <Alert severity="error">{error}</Alert>}
+        <Box sx={{ mt: 2 }}>
+          <Divider sx={{ mb: 2 }}>{t("Common.or")}</Divider>
+          <Button
+            fullWidth
+            variant="outlined"
+            onClick={loginWithGoogle}
+            disabled={isLoading}
+            sx={{ mb: 2 }}
+            startIcon={
+              <Image
+                src="/500px-google.png"
+                width={16}
+                height={16}
+                alt="google icon"
+              />
+            }
+          >
+            {isLoading ? (
+              <CircularProgress size={24} />
+            ) : (
+              t("LoginPage.loginWithGoogle")
+            )}
+          </Button>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {t("LoginPage.registerQuestion")}{" "}
+            <LinkMaterial component={Link} href="/register">
+              {t("LoginPage.registerLink")}
+            </LinkMaterial>
+          </Typography>
+        </Box>
       </Paper>
     </Container>
   );

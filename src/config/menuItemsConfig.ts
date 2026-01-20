@@ -1,4 +1,3 @@
-import { MenuItem } from "@/components/navigation/MenuItem";
 import {
   Dashboard as DashboardIcon,
   Assessment as AssessmentIcon,
@@ -39,23 +38,3 @@ export const menuItems = [
     langCode: "",
   },
 ];
-interface MenuItemsProp {
-  open: boolean;
-}
-export default function MenuItems({ open }: MenuItemsProp) {
-  return (
-    <>
-      {menuItems.map((item) => {
-        return (
-          <MenuItem
-            key={item.href}
-            label={item.text}
-            Icon={item.icon}
-            href={item.href}
-            open={open}
-          />
-        );
-      })}
-    </>
-  );
-}
