@@ -1,6 +1,6 @@
 import { initializeApp, getApps, getApp, FirebaseOptions } from "firebase/app";
 import { getAuth } from "firebase/auth";
-console.log("API Key loaded:", process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
+
 //config console firebase
 const firebaseConfig: FirebaseOptions = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,

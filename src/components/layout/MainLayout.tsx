@@ -5,7 +5,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { DrawerHeader } from "../navigation/DrawerHeader";
 import Header from "../navigation/Header";
 import SideMenu from "../navigation/SideMenu";
-import MenuItems from "@/config/menuListItems";
+import MenuItems from "@/components/navigation/MenuListItems";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
