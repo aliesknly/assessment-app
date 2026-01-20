@@ -12,5 +12,8 @@ export const ENVIROMENTS = {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
     clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
     privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    emulator: {
+      authHost: process.env.NEXT_PUBLIC_FIREBASE_EMULATOR_AUTH,
+    },
   },
 };
