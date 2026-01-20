@@ -18,8 +18,12 @@ import {
   Alert,
   CircularProgress,
   Paper,
+  Divider,
 } from "@mui/material";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import LinkMaterial from "@/components/navigation/LinkMaterial";
+import Link from "next/link";
 
 interface FormState {
   email: string;
@@ -132,7 +136,6 @@ export default function Login() {
             fullWidth
             variant="contained"
             disabled={isLoading}
-            sx={{ mb: 2 }}
           >
             {isLoading ? (
               <CircularProgress size={24} />
@@ -141,20 +144,37 @@ export default function Login() {
             )}
           </Button>
         </Box>
-        <Button
-          fullWidth
-          variant="outlined"
-          onClick={loginWithGoogle}
-          disabled={isLoading}
-          sx={{ mb: 2 }}
-        >
-          {isLoading ? (
-            <CircularProgress size={24} />
-          ) : (
-            t("LoginPage.loginWithGoogle")
-          )}
-        </Button>
         {error && <Alert severity="error">{error}</Alert>}
+        <Box sx={{ mt: 2 }}>
+          <Divider sx={{ mb: 2 }}>{t("Common.or")}</Divider>
+          <Button
+            fullWidth
+            variant="outlined"
+            onClick={loginWithGoogle}
+            disabled={isLoading}
+            sx={{ mb: 2 }}
+            startIcon={
+              <Image
+                src="/500px-google.png"
+                width={16}
+                height={16}
+                alt="google icon"
+              />
+            }
+          >
+            {isLoading ? (
+              <CircularProgress size={24} />
+            ) : (
+              t("LoginPage.loginWithGoogle")
+            )}
+          </Button>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {t("LoginPage.registerQuestion")}{" "}
+            <LinkMaterial component={Link} href="/register">
+              {t("LoginPage.registerLink")}
+            </LinkMaterial>
+          </Typography>
+        </Box>
       </Paper>
     </Container>
   );

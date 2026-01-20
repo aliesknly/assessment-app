@@ -10,11 +10,11 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
-    "verified": "Verified",
     "notVerified": "Not Verified",
     "toggleTheme": "Toggle theme",
     "settings": "Settings",
-    "verified": "Verified"
+    "verified": "Verified",
+    "or": "Or"
   },
   "HomePage": {
     "title": "Welcome to Assessment App",
@@ -26,9 +26,16 @@
     "emailPlaceholder": "Enter your email",
     "passwordPlaceholder": "Enter your password",
     "loginWithEmail": "Login with Email",
-    "loginWithGoogle": "Login with Google",
+    "loginWithGoogle": "Continue with Google",
     "loading": "Loading...",
-    "invalidCredentials": "Invalid email or password"
+    "invalidCredentials": "Invalid email or password",
+    "registerQuestion": "Haven't signed up yet?",
+    "registerLink": "Create an account"
+  },
+  "RegisterPage": {
+    "registerWithEmail": "Register with Email",
+    "registerWithGoogle": "Register with Google",
+    "register": "Register"
   },
   "ProfilePage": {
     "title": "My Profile",

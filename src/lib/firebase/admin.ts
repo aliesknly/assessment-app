@@ -1,3 +1,4 @@
+import { ENVIROMENTS } from "@/config/env";
 import {
   initializeApp,
   getApps,
@@ -14,22 +15,22 @@ let serverAuth: Auth;
 if (typeof window === "undefined") {
   // Server-side only
   const useServiceAccount =
-    process.env.FIREBASE_PRIVATE_KEY && process.env.FIREBASE_CLIENT_EMAIL;
+    ENVIROMENTS.firebase.privateKey && ENVIROMENTS.firebase.clientEmail;
 
   app =
     getApps().length === 0
       ? initializeApp({
           credential: useServiceAccount
             ? cert({
-                projectId: "assessmet-a943f",
-                privateKey: process.env.FIREBASE_PRIVATE_KEY!.replace(
+                projectId: ENVIROMENTS.firebase.projectId,
+                privateKey: ENVIROMENTS.firebase.privateKey!.replace(
                   /\\n/g,
                   "\n",
                 ),
-                clientEmail: process.env.FIREBASE_CLIENT_EMAIL!,
+                clientEmail: ENVIROMENTS.firebase.clientEmail!,
               })
             : applicationDefault(),
-          projectId: "assessmet-a943f",
+          projectId: ENVIROMENTS.firebase.projectId,
         })
       : getApps()[0];
 
