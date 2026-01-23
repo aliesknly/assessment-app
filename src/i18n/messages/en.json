@@ -42,6 +42,7 @@
   },
   "VerifyEmailPage": {
     "title": "Verify your email address",
+    "welcome": " Welcome! 👋 Thanks for signing up — your account is ready! Check yourk email and click the verification link to activate your account and start exploring. We’re happy to have you with us 🚀 ",
     "content": "We've sent a verification link to your email address. Please open the email and click the link to activate your account.",
     "stepsCheckEmail": {
       "title": "Didn't receive the email?",

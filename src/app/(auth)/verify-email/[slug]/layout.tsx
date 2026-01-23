@@ -15,6 +15,9 @@ export default function VerificationEmailLayout({
           <Typography variant="h3" component="h1" gutterBottom align="center">
             {t("VerifyEmailPage.title")}
           </Typography>
+          <Typography variant="body1" color="textSecondary">
+            {t("VerifyEmailPage.welcome")}
+          </Typography>
           {children}
         </Paper>
       </Container>

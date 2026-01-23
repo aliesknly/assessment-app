@@ -42,6 +42,7 @@
   },
   "VerifyEmailPage": {
     "title": "Verifica tu dirección de correo electrónico",
+    "welcome": "¡Bienvenido/a! 👋 Gracias por registrarte, tu cuenta ya está lista. Revisa tu correo electrónico y haz clic en el enlace de verificación para activar tu cuenta y empezar a explorar. ¡Nos alegra tenerte aquí! 🚀",
     "content": "Hemos enviado un enlace de verificación a tu dirección de correo electrónico. Por favor, abre el correo y haz clic en el enlace para activar tu cuenta.",
     "stepsCheckEmail": {
       "title": "¿No recibiste el correo?",
