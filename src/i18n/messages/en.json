@@ -33,9 +33,42 @@
     "registerLink": "Create an account"
   },
   "RegisterPage": {
+    "title": "Sign Up",
     "registerWithEmail": "Register with Email",
     "registerWithGoogle": "Register with Google",
-    "register": "Register"
+    "register": "Register",
+    "loginQuestion": "Do you have an account??",
+    "loginLink": "Login your account"
+  },
+  "VerifyEmailPage": {
+    "title": "Verify your email address",
+    "content": "We've sent a verification link to your email address. Please open the email and click the link to activate your account.",
+    "stepsCheckEmail": {
+      "title": "Didn't receive the email?",
+      "steps": {
+        "1": "Check your spam or junk folder.",
+        "2": "Make sure you entered the correct email address.",
+        "3": "The link may take a few minutes to arrive."
+      }
+    },
+    "verificationAddress": {
+      "title": "Resend verification email",
+      "question": "Didn't get the email?",
+      "suggestion": "You can request a new verification address.",
+      "buttonLabel": "Resend email"
+    },
+    "important": {
+      "title": "Important!",
+      "infoSteps": {
+        "1": "The verification link will expire after a short time.",
+        "2": "For security reasons, you must verify your email before accessing the app."
+      },
+      "alreadyVerified": {
+        "title": "Already verified?",
+        "content": "Once you've verified your email, you can continues to sign in.",
+        "buttonLabel": "Go to login"
+      }
+    }
   },
   "ProfilePage": {
     "title": "My Profile",

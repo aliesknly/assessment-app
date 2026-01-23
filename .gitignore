@@ -40,6 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+#AI Actions
 AGENTS.md
 .gga
 
+# Firebase
+firebase-debug.log

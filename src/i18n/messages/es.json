@@ -33,9 +33,42 @@
     "registerLink": "Crear cuenta"
   },
   "RegisterPage": {
+    "title": "Registrarse",
     "registerWithEmail": "Registrarse con Email",
     "registerWithGoogle": "Registrarse con Google",
-    "register": "Registrarse"
+    "register": "Registrarse",
+    "loginQuestion": "Ya tienes una cuenta?",
+    "loginLink": "Iniciar seccion"
+  },
+  "VerifyEmailPage": {
+    "title": "Verifica tu dirección de correo electrónico",
+    "content": "Hemos enviado un enlace de verificación a tu dirección de correo electrónico. Por favor, abre el correo y haz clic en el enlace para activar tu cuenta.",
+    "stepsCheckEmail": {
+      "title": "¿No recibiste el correo?",
+      "steps": {
+        "1": "Revisa tu carpeta de spam o correo no deseado.",
+        "2": "Asegúrate de haber ingresado la dirección de correo electrónico correcta.",
+        "3": "El enlace puede tardar unos minutos en llegar."
+      },
+      "verificationAddress": {
+        "title": "Reenviar correo de verificación",
+        "question": "¿No te llegó el correo?",
+        "suggestion": "Puedes solicitar un nuevo enlace de verificación.",
+        "buttonLabel": "Reenviar correo"
+      },
+      "important": {
+        "title": "Importante",
+        "infoSteps": {
+          "1": "El enlace de verificación expirará después de un corto período de tiempo.",
+          "2": "Por razones de seguridad, debes verificar tu correo electrónico antes de acceder a la aplicación."
+        },
+        "alreadyVerified": {
+          "title": "¿Ya verificaste tu correo?",
+          "content": "Una vez que hayas verificado tu correo electrónico, podrás continuar e iniciar sesión.",
+          "buttonLabel": "Ir al inicio de sesión"
+        }
+      }
+    }
   },
   "ProfilePage": {
     "title": "Mi Perfil",

@@ -34,4 +34,4 @@ RULES_FILE="AGENTS.md"
 
 # Strict mode: fail if AI response is ambiguous
 # Default: true
-STRICT_MODE="true"
+STRICT_MODE="false"

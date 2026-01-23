@@ -1,11 +1,9 @@
-"use client";
-
-import { TextField } from "@mui/material";
+import RegisterForm from "./_components/RegisterForm";
 
 export default function RegisterPage() {
   return (
     <>
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <RegisterForm />
     </>
   );
 }
