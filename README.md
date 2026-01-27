@@ -142,13 +142,32 @@ The project is built using modern, scalable, and secure technologies:
    - Copy `.env.local` and configure Firebase keys \
      (see `.env.local` section above).
 
-4. Run the development server:
+```env
+# Firebase client
+    NEXT_PUBLIC_FIREBASE_API_KEY
+    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    NEXT_PUBLIC_FIREBASE_APP_ID
+    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    NEXT_PUBLIC_FIREBASE_EMULATOR
+    NEXT_PUBLIC_FIREBASE_EMULATOR_AUTH
+# Server (private)
+    FIREBASE_CLIENT_EMAIL
+    FIREBASE_PRIVATE_KEY
+# Mongodb server
+    MONGO_ROOT_USERNAME
+    MONGO_ROOT_PASSWORD
+```
+
+1. Run the development server:
 
    ```bash
    bun run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser.
+2. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
 ## Roadmap
 
