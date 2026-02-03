@@ -11,6 +11,8 @@ RUN curl -sL https://firebase.tools | bash
 # Esto incluye firebase.json y cualquier archivo de reglas o índices que necesites
 COPY firebase.json .
 COPY .firebaserc .
+
+RUN firebase init
 #COPY firestore.rules .
 # Si usas otras reglas (e.g., database.rules.json, storage.rules), cópialas también
 # COPY database.rules.json .
@@ -37,4 +39,4 @@ EXPOSE 8080
 # --project es opcional si ya tienes el proyecto configurado en .firebaserc o firebase.json
 # --only especifica qué emuladores iniciar. Asegúrate de que coincida con tu firebase.json o lo que necesites
 # --import y --export son útiles para persistencia de datos (ver más abajo)
-CMD ["firebase", "emulators:start", "--only", "auth,ui"]
+CMD ["firebase", "emulators:start",  "--host", "0.0.0.0"]

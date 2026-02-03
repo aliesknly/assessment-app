@@ -9,60 +9,19 @@ services:
       - ./data/db:/data:db
     ports:
       - "27017:27017"
-    networks:
-      - develop-network
 
-  mongo-express:
-    image: mongo-express
-    restart: always
-    ports:
-      - 8081:8081
-    environment:
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_BASICAUTH_ENABLED: true
-      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
-      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
-    networks:
-      - develop-network
-
-  web-develop:
-    image: oven/bun:latest
-    container_name: nextjs-bun-dev
-    working_dir: /app
-    command: bun run dev
-    volumes:
-      - .:/app
-      - /app/node_modules
+  react-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.bun
+    image: assesstment-dev
+    container_name: assesstment-dev
     ports:
       - "3000:3000"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
     environment:
-      NODE_ENV: development
-      NEXT_PUBLIC_FIREBASE_AUTH_EMULATOR_HOST: localhost:9099
-      NEXT_PUBLIC_FIREBASE_EMULATOR_HOST: localhost:8080
-    depends_on:
-      - firebase
-
-    networks:
-      - develop-network
-
-  firebase:
-    build:
-      dockerfile: Dockerfile.firebase
-      context: .
-    container_name: firebase-emulator
-    volumes:
-      - .:/app
-      - firebase-data:/root/.cache/firebase
-    ports:
-      - "4000:4000"
-      - "9099:9099"
-      - "8080:8080"
-      - "9199:9199"
-    networks:
-      - develop-network
-
-volumes:
-  firebase-data:
-
-networks:
-  develop-network:
+      env_file: .env.local
